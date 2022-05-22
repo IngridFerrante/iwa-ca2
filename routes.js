@@ -4,7 +4,7 @@ module.exports.UPLOAD_PATH = 'uploads';
 
 const   express = require("express"),
         router = express.Router(),
-        ticketCtrl = require("./ticket-controller"),
+        concertCtrl = require("./concert-controller"),
         multer = require('multer'),
         upload = multer({ dest: module.exports.UPLOAD_PATH }),
         app = express(),
@@ -12,11 +12,11 @@ const   express = require("express"),
 
 router.use(express.static(__dirname + '/public/'));
 
-router.post('/tickets', ticketCtrl.createTicket);
-router.get('/tickets', ticketCtrl.getTickets);
-router.get('/tickets/:id', ticketCtrl.getTicket);
-router.put('/tickets/:id', ticketCtrl.updateTicket);
-router.delete('/tickets/:id', ticketCtrl.deleteTicket);
+router.post('/concerts', concertCtrl.createConcert);
+router.get('/concerts', concerttCtrl.getConcerts);
+router.get('/concerts/:id', concertCtrl.getConcert);
+router.put('/concerts/:id', concertCtrl.updateConcert);
+router.delete('/concerts/:id', concertCtrl.deleteConcert);
 
 router.get('/',(req, res) => {
     res.sendFile('index.html', {
