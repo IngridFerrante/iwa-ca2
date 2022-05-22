@@ -14,7 +14,7 @@ app.use(logger("tiny"));
 app.use(require('./routes'));
 
          mongoose.connect(process.env.dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-        .then((result) => console.log('connected successfully to database'))
+        .then((result) => console.log('connected successfully to the database'))
         .catch((err) => console.log(err));
 
 app.listen(port, function(err){

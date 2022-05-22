@@ -19,7 +19,7 @@ exports.getConcerts = function(req, res){
     });
 };
 
-exports.getConcerts = function(req, res) {
+exports.getConcert = function(req, res) {
     Concert.findOne({_id: req.params.id}, function (err, concert) {
       if (err) {
         res.status(400).json(err);
