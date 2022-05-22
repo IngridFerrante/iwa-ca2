@@ -13,7 +13,7 @@ const   express = require("express"),
 router.use(express.static(__dirname + '/public/'));
 
 router.post('/concerts', concertCtrl.createConcert);
-router.get('/concerts', concerttCtrl.getConcerts);
+router.get('/concerts', concertCtrl.getConcerts);
 router.get('/concerts/:id', concertCtrl.getConcert);
 router.put('/concerts/:id', concertCtrl.updateConcert);
 router.delete('/concerts/:id', concertCtrl.deleteConcert);
