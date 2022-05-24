@@ -1,6 +1,6 @@
 let concertSelected='';// variable to see the concert selected
 let concertIds=[];
-let apiURL = "https://iwaca2-version14.herokuapp.com/concerts"
+let apiURL = "https://iwa-ca2-version15.herokuapp.com/concerts"
 
 function addConcert(){
     $("#form-concerts").empty();
