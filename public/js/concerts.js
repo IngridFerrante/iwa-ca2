@@ -1,6 +1,6 @@
 let concertSelected='';// variable to see the concert selected
 let concertIds=[];
-let apiURL = "https://iwa-ca2-v17.herokuapp.com/concerts"
+let apiURL = "https://iwa-ca-2-v18.herokuapp.com/concerts"
 
 function addConcert(){
     $("#form-concerts").empty();
@@ -165,7 +165,7 @@ function getConcertNames(){
             var id = data[i]._id;
             if(!concertIds.includes(id)){
             document.getElementById("my-concerts").innerHTML +=
-            "<h2 id='artists"+id+"' onclick= \"checkConcert('"+id+"')\">" + data[i].name+"</h2>"
+            "<h2 id='artists"+id+"' onclick= \"checkConcert('"+id+"')\">" + data[i].name+ "\n" + data[i].location+"</h2>"
             concertIds.push(id);
             }
         
