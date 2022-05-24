@@ -11,7 +11,7 @@ function addConcert(){
     "<label for='clocation'>Location: </label>" +
     "<input type='text' id = 'concertLocation'><br></br>" +
     "<input id='concert-id' type='hidden' value=''/>"+
-    "<button type='button' class='btn' onclick ='submitConcert()' >Submit</button>"+
+    "<button type='button' class='btn' onclick ='submitConcert()'>Submit</button>"+
     "</form>"
     $("#form-concerts").append(strHtml);
 }
