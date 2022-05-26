@@ -1,6 +1,6 @@
 let concertSelected='';// variable to see the concert selected
 let concertIds=[];
-let apiURL = "https://iwa-ca-2-v18.herokuapp.com/concerts"
+let apiURL = "https://iwa-ca2v20.herokuapp.com/concerts"
 
 function addConcert(){
     $("#form-concerts").empty();
@@ -53,6 +53,8 @@ function editConcert(){
     }
 
 };
+
+
 
 //saving the concert that was submitted via API
 function submitConcert() {
@@ -145,10 +147,10 @@ function showConcert(concertId){
 
 
 //show off concerts 
-function checkConcert(concertIds){
+function checkConcert(concertId){
     $("#form-concerts").empty();
-    showConcert(concertIds);
-    concertSelected = concertIds;
+    showConcert(concertId);
+    concertSelected = concertId;
 };
 
 
@@ -230,8 +232,6 @@ function updateConcert(){
         alert("Fill all the fields");
         return;
     }
-    
-    
     
     fetch(apiURL+concertSelected,{
         method: 'put',
